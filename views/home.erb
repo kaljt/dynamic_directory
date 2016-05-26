@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+  <title>Dynamic Directory Index</title>
+</head>
+ 
+ <body>
+   <% if params[:sort_order] == 'reverse' %>
+   <a href= '/'><%= @sort %></a>
+    <% else %>
+   <a href= '/?sort_order=reverse'><%= @sort %></a>
+   <% end %>
+   <ul>
+     <% @file_list.each do |name| %>
+     <li>
+       <a href= <%= name %>><%= name %></a>
+     </li>
+     <% end %>
+   </ul>
+   
+ </body>
+  
+</html>

@@ -1,0 +1,2 @@
+test file
+placed in public/
